@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <title>Riverlight — The art of noticing</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232b594d'/%3E%3Cpath d='M20 7L25 15L33 20L25 25L20 33L15 25L7 20L15 15Z' fill='%23f5cf77'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Riverlight spot the difference game">
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="Riverlight home"><span class="brand-icon">✦</span> RIVERLIGHT</a>
+      <span class="tagline">A little closer. A little more wonder.</span>
+      <button id="sound" type="button" aria-pressed="true">Sound on <span>♪</span></button>
+    </header>
+    <section class="intro"><div><p class="eyebrow">THE ART OF NOTICING</p><h1>Same place. Different details.</h1><p class="subtitle">Two quiet worlds. A handful of secrets. Find what changed.</p></div><div class="level-track" id="level-track" aria-label="Level progress"></div></section>
+    <section class="game-bar" aria-label="Game status">
+      <div class="scene-info"><span class="status-dot"></span><div><span class="small-label" id="chapter">CHAPTER 01 / 03</span><strong id="scene-name">The river wakes</strong></div></div>
+      <div class="stat remaining-stat"><span class="small-label">LEFT TO FIND</span><strong id="remaining" aria-live="polite">7 <em>/ 7</em></strong></div>
+      <div class="stat"><span class="small-label">TIME LEFT</span><strong id="timer">02:30</strong></div>
+      <div class="stat"><span class="small-label">YOUR SCORE</span><strong id="score">0000</strong></div>
+      <button id="hint" class="hint-button" type="button"><span>✧</span> A little hint <kbd>H</kbd><small id="hints">3 left</small></button>
+    </section>
+    <section class="pictures" aria-label="Find differences between the two pictures">
+      <article class="picture"><div class="picture-label"><span>01 <b>THE ORIGINAL</b></span><span>Look closely</span></div><canvas id="left" width="720" height="560" tabindex="0" aria-label="Original scene. Click differences, or use arrows and Enter."></canvas></article>
+      <article class="picture"><div class="picture-label"><span>02 <b>THE OTHER SIDE</b></span><span>Spot the change</span></div><canvas id="right" width="720" height="560" tabindex="0" aria-label="Changed scene. Click differences, or use arrows and Enter."></canvas></article>
+    </section>
+    <section class="findings"><div id="found-chips" aria-label="Differences found"></div><p id="message" aria-live="polite"><span>✦</span> The timer starts with your first discovery.</p><span class="difficulty" id="difficulty">A gentle beginning</span></section>
+    <footer class="play-footer"><span>Slow down. Look a little closer.</span><div><span><kbd>↑ ↓ ← →</kbd> Move</span><span><kbd>↵</kbd> Find</span><span><kbd>H</kbd> Hint</span><span><kbd>R</kbd> Restart</span></div></footer>
+    <div id="overlay" class="overlay" hidden><section class="result-card" role="dialog" aria-modal="true" aria-labelledby="result-title"><p class="eyebrow" id="result-eyebrow"></p><div class="result-symbol" id="result-symbol">✦</div><h2 id="result-title"></h2><p id="result-description"></p><strong id="result-score"></strong><button id="continue" type="button"></button><small>Press R to begin again</small></section></div>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

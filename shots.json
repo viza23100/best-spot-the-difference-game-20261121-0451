@@ -1,0 +1,6 @@
+[
+  { "name": "1-cover.jpg", "query": "?shot=cover" },
+  { "name": "2-market.jpg", "query": "?shot=market" },
+  { "name": "3-garden.jpg", "query": "?shot=garden" },
+  { "name": "4-complete.jpg", "query": "?shot=end" }
+]
